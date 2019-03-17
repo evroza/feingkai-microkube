@@ -2,9 +2,12 @@ version: '3.6'
 
 services:
   frontend:
-    image: "<%= @config['images']['frontend'] %>"
+    image: "rubykube/mikroapp:0.1.5"
     volumes:
-      - ../config/frontend/env.js:/home/node/public/env.js
+      - /media/evroza/3F6ED9D12080C137/01.Upwork/feingkai-frontend:/home/node/feingkai-frontend
+    working_dir: /home/node/feingkai-frontend/theme/dist/feingkai
+    ports:
+      - '3000:3000'
     labels:
       traefik.enable: true
       traefik.frontend.rule: "PathPrefix:/;Host:<%= @config['app']['subdomain'] %>.<%= @config['app']['domain'] %>"

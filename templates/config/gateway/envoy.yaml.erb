@@ -32,10 +32,6 @@ static_resources:
                 route:
                   cluster: peatio
               - match:
-                  prefix: "/assets/"
-                route:
-                  cluster: peatio
-              - match:
                   prefix: "/api/v2/ranger/public"
                 route:
                   cluster: ranger

@@ -1,3 +1,4 @@
+data/geth
 config/acme.json
 config/frontend/*.js
 config/gateway/mapping.yaml

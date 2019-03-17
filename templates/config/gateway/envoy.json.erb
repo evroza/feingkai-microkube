@@ -359,39 +359,6 @@
                                                                     "name": ":authority"
                                                                 }
                                                             ],
-                                                            "prefix": "/assets"
-                                                        },
-                                                        "route": {
-                                                            "cors": {
-                                                                "allow_methods": "POST, GET, OPTIONS",
-                                                                "allow_origin": [
-                                                                    "*"
-                                                                ],
-                                                                "enabled": true,
-                                                                "max_age": "6400"
-                                                            },
-                                                            "prefix_rewrite": "/assets",
-                                                            "priority": null,
-                                                            "timeout": "3.000s",
-                                                            "weighted_clusters": {
-                                                                "clusters": [
-                                                                    {
-                                                                        "name": "cluster_peatio_8000",
-                                                                        "weight": 100.0
-                                                                    }
-                                                                ]
-                                                            }
-                                                        }
-                                                    },
-                                                    {
-                                                        "match": {
-                                                            "case_sensitive": true,
-                                                            "headers": [
-                                                                {
-                                                                    "exact_match": "<%= @config['app']['subdomain'] %>.<%= @config['app']['domain'] %>",
-                                                                    "name": ":authority"
-                                                                }
-                                                            ],
                                                             "prefix": "/admin"
                                                         },
                                                         "route": {
