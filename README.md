@@ -1,3 +1,10 @@
+## Feingkai specific config:
+To use these scripts on your dev machine. Make sure you update the location of feingkai frontend on you local machine appropriately so that it can be available inside the feingkai forntend container.
+
+You want to update the config file located at ``` templates/compose/frontend.yaml.erb  ```
+
+The values for the volumes and working_dir should point to the path of the feingkai frontend on your machine. Take a look at the pre-existing paths in that template to understand how your values should be setup.
+
 # MicroKube
 
 > Minimal stack for VM deployment.
